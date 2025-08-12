@@ -4,6 +4,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { useRef, useState } from "react";
+import { contactSchema } from "@/lib/validations";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [trap, setTrap] = useState("");
@@ -12,10 +14,29 @@ const Contact = () => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    if (trap || Date.now() - started.current < 2000) return;
-    const body = `Name: ${data.get("name")}
-Email: ${data.get("email")}
-Message: ${data.get("message")}`;
+    
+    // Security checks: honeypot and time-based validation
+    if (trap || Date.now() - started.current < 2000) {
+      toast.error("Please try again");
+      return;
+    }
+    
+    // Validate form data
+    const formData = {
+      name: data.get("name") as string,
+      email: data.get("email") as string,
+      message: data.get("message") as string,
+    };
+    
+    const validationResult = contactSchema.safeParse(formData);
+    if (!validationResult.success) {
+      toast.error("Please check your input and try again");
+      return;
+    }
+    
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}`;
     window.location.href = `mailto:${siteConfig.adminEmail}?subject=Contact from promotions.vinofyx.com&body=${encodeURIComponent(body)}`;
   };
 

@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { businessListingSchema } from "@/lib/validations";
+import { toast } from "sonner";
 
 const ListYourBusiness = () => {
   const [detail, setDetail] = useState({ name: "", category: "", location: "", contact: "", website: "", description: "" });
@@ -11,7 +13,20 @@ const ListYourBusiness = () => {
 
   const submitLocal = (e: React.FormEvent) => {
     e.preventDefault();
-    if (trap) return; // honeypot
+    
+    // Security check: honeypot
+    if (trap) {
+      toast.error("Please try again");
+      return;
+    }
+    
+    // Validate form data
+    const validationResult = businessListingSchema.safeParse(detail);
+    if (!validationResult.success) {
+      toast.error("Please check your input and try again");
+      return;
+    }
+    
     const body = `
 Business Name: ${detail.name}
 Category: ${detail.category}
