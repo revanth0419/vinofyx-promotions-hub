@@ -47,9 +47,7 @@ export const Header = () => {
       </div>
       {open && <div className="md:hidden border-t">
           <div className="container py-3 flex flex-col gap-3">
-            {navItems.map(n => <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-foreground">
-                {n.label}
-              </Link>)}
+            {navItems.map(n => {})}
           </div>
         </div>}
     </header>;
