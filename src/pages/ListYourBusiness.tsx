@@ -57,7 +57,7 @@ Description: ${detail.description}
             <Textarea placeholder="Short Description" required value={detail.description} onChange={(e) => setDetail({ ...detail, description: e.target.value })} />
             <input type="text" className="hidden" value={trap} onChange={(e) => setTrap(e.target.value)} aria-hidden tabIndex={-1} />
             <Button type="submit">Submit</Button>
-            <p className="text-sm text-muted-foreground">Tip: To use Google Forms, set googleFormUrl in src/config/site.ts. We’ll add auto-sync once Supabase is connected.</p>
+            <p className="text-sm text-muted-foreground">Your business details will be sent to our team for review and approval.</p>
           </form>
         )}
       </section>
