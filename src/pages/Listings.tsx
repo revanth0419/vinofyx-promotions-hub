@@ -22,8 +22,8 @@ const Listings = () => {
   const filtered = useMemo(() => {
     return businesses.filter(b =>
       (!search || b.name.toLowerCase().includes(search.toLowerCase())) &&
-      (!category || b.category === category) &&
-      (!location || b.location === location)
+      (!category || category === "all" || b.category === category) &&
+      (!location || location === "all" || b.location === location)
     );
   }, [search, category, location]);
 

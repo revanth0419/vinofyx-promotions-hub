@@ -11,7 +11,7 @@ const Promotions = () => {
   const list = useMemo(() => {
     const now = Date.now();
     return promotions
-      .filter((p) => (!category || p.category === category))
+      .filter((p) => (!category || category === "all" || p.category === category))
       .filter((p) => showExpired || new Date(p.expiresAt).getTime() >= now)
       .sort((a, b) => new Date(a.expiresAt).getTime() - new Date(b.expiresAt).getTime());
   }, [category, showExpired]);
@@ -25,7 +25,7 @@ const Promotions = () => {
           <Select value={category} onValueChange={setCategory}>
             <SelectTrigger className="w-56"><SelectValue placeholder="Filter by category" /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               {categories.map((c) => <SelectItem key={c} value={c}>{c}</SelectItem>)}
             </SelectContent>
           </Select>
