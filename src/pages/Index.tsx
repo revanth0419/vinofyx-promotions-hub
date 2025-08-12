@@ -1,13 +1,72 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { SEO } from "@/components/seo/SEO";
+import { Hero } from "@/components/Hero";
+import { businesses, promotions, categories } from "@/data/data";
+import { BusinessCard } from "@/components/BusinessCard";
+import { PromotionCard } from "@/components/PromotionCard";
+import { Link, useNavigate } from "react-router-dom";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const [q, setQ] = useState("");
+  const navigate = useNavigate();
+  const onSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const params = new URLSearchParams();
+    if (q) params.set("q", q);
+    navigate(`/listings?${params.toString()}`);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <SEO
+        title="VinoFyx Promotions — Promote Your Business"
+        description="Discover local deals and list your business on VinoFyx Promotions. Fast, modern, and SEO-optimized platform for promotions."
+        path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "VinoFyx Promotions",
+          "url": "https://promotions.vinofyx.com",
+        }}
+      />
+      <Hero />
+      <section className="container py-10">
+        <form onSubmit={onSearch} className="flex gap-2">
+          <Input placeholder="Search businesses..." value={q} onChange={(e) => setQ(e.target.value)} />
+          <Button type="submit">Search</Button>
+        </form>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {categories.map((c) => (
+            <Button key={c} variant="secondary" size="sm" asChild>
+              <Link to={`/listings?category=${encodeURIComponent(c)}`}>{c}</Link>
+            </Button>
+          ))}
+        </div>
+      </section>
+      <section className="container py-10">
+        <h2 className="text-2xl font-semibold mb-4">Featured Businesses</h2>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {businesses.slice(0, 6).map((b) => (
+            <BusinessCard key={b.id} {...b} />
+          ))}
+        </div>
+      </section>
+      <section className="container py-10">
+        <h2 className="text-2xl font-semibold mb-4">Latest Promotions</h2>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {promotions.slice(0, 6).map((p) => (
+            <PromotionCard key={p.id} {...p} />
+          ))}
+        </div>
+        <div className="mt-6">
+          <Button asChild variant="secondary">
+            <Link to="/promotions">View all promotions</Link>
+          </Button>
+        </div>
+      </section>
+    </>
   );
 };
 
