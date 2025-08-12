@@ -9,7 +9,7 @@ export const Footer = () => {
           </p>
         </div>
         <nav className="flex flex-col gap-2 text-sm">
-          
+          <Link to="/listings">Listings</Link>
           <Link to="/promotions">Promotions</Link>
           <Link to="/list-your-business">List Your Business</Link>
           <Link to="/about">About</Link>
