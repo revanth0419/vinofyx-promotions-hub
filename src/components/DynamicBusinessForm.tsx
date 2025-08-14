@@ -3,10 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { businessListingSchema } from "@/lib/validations";
 import { toast } from "sonner";
 import { BusinessCard, Business } from "@/components/BusinessCard";
 import { ExternalLink } from "lucide-react";
+import { categories } from "@/data/data";
 
 type LocalBusiness = {
   id: string;
@@ -25,7 +27,8 @@ export const DynamicBusinessForm = () => {
     category: "",
     description: "",
     contact: "",
-    image: ""
+    image: "",
+    rating: 4.0
   });
   const [localBusinesses, setLocalBusinesses] = useState<LocalBusiness[]>([]);
 
@@ -60,7 +63,7 @@ export const DynamicBusinessForm = () => {
       contact: formData.contact,
       image: formData.image || "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
       description: formData.description,
-      rating: 4.0
+      rating: formData.rating
     };
 
     const updatedBusinesses = [...localBusinesses, newBusiness];
@@ -73,7 +76,8 @@ export const DynamicBusinessForm = () => {
       category: "",
       description: "",
       contact: "",
-      image: ""
+      image: "",
+      rating: 4.0
     });
 
     toast.success("Business added successfully!");
@@ -105,11 +109,37 @@ export const DynamicBusinessForm = () => {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
+            <Select value={formData.category} onValueChange={(value) => setFormData({ ...formData, category: value })}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select category" />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map((category) => (
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             <Input
-              placeholder="Category (e.g., Restaurant, Health, Retail)"
-              required
-              value={formData.category}
-              onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+              placeholder="Location in Hyderabad"
+              value="Hyderabad, India"
+              disabled
+            />
+            <Input
+              type="number"
+              placeholder="Rating (1-5)"
+              min="1"
+              max="5"
+              step="0.1"
+              value={formData.rating}
+              onChange={(e) => setFormData({ ...formData, rating: parseFloat(e.target.value) || 4.0 })}
+            />
+            <Input
+              type="url"
+              placeholder="Image URL (direct link to image)"
+              value={formData.image}
+              onChange={(e) => setFormData({ ...formData, image: e.target.value })}
             />
             <Textarea
               placeholder="Business Description"
@@ -122,12 +152,6 @@ export const DynamicBusinessForm = () => {
               required
               value={formData.contact}
               onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-            />
-            <Input
-              type="url"
-              placeholder="Image URL (optional)"
-              value={formData.image}
-              onChange={(e) => setFormData({ ...formData, image: e.target.value })}
             />
             <Button type="submit" className="w-full">
               Add Business

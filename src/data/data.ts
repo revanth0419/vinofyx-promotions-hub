@@ -1,15 +1,13 @@
-// Using public placeholder images that actually exist
+// Default placeholder image for businesses
 const placeholder = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
 
-export const categories = ["Restaurant", "Retail", "Services", "Health", "Entertainment"];
+export const categories = ["Restaurant", "Real Estate", "Shopping", "Other"];
 export const locations = ["Hyderabad, India"];
 
 export const businesses = [
-  { id: "b1", name: "Vasavi Signature", category: "Real Estate", location: "Hyderabad, India", rating: 4.8, image: "https://via.placeholder.com/300", address: "Kukatpally, Hyderabad, Telangana", phone: "+91 98765-43210", email: "info@vasavisignature.com", website: "https://vasavisignature.example.com", socials: {}, description: "3BHK Flats in Kukatpally with modern amenities, price ₹1.2 Cr" },
-  { id: "b2", name: "Paradise Biryani", category: "Restaurant", location: "Hyderabad, India", rating: 4.9, image: "https://via.placeholder.com/300", address: "Secunderabad, Hyderabad, Telangana", phone: "+91 91234-56789", email: "info@paradisebiryani.com", website: "https://paradisebiryani.example.com", socials: {}, description: "Famous Hyderabadi biryani restaurant in Secunderabad" },
-  { id: "b3", name: "GVK One Mall", category: "Shopping", location: "Hyderabad, India", rating: 4.7, image: "https://via.placeholder.com/300", address: "Banjara Hills, Hyderabad, Telangana", phone: "+91 99887-66554", email: "info@gvkonemall.com", website: "https://gvkonemall.example.com", socials: {}, description: "Premium shopping mall in Banjara Hills" },
-  { id: "b4", name: "Spice Garden", category: "Restaurant", location: "Hyderabad, India", rating: 4.6, image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60", address: "123 Banjara Hills, Hyderabad, Telangana", phone: "+91 98765-43210", email: "info@spicegarden.com", website: "https://spicegarden.example.com", socials: { instagram: "https://instagram.com/spicegarden" }, description: "Authentic Hyderabadi cuisine with traditional biryani and kebabs." },
-  { id: "b5", name: "FitZone Gym", category: "Health", location: "Hyderabad, India", rating: 4.8, image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60", address: "42 Jubilee Hills, Hyderabad, Telangana", phone: "+91 98765-54321", email: "hello@fitzone.com", website: "https://fitzone.example.com", socials: { facebook: "https://facebook.com/fitzone" }, description: "Modern fitness center with state-of-the-art equipment and expert trainers." },
+  { id: "b1", name: "Vasavi Signature", category: "Real Estate", location: "Hyderabad, India", rating: 4.8, image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Hyderabad_Flat_Building.jpg", address: "Kukatpally, Hyderabad, Telangana", phone: "+91 98765-43210", email: "info@vasavisignature.com", website: "https://vasavisignature.example.com", socials: {}, description: "3BHK Flats in Kukatpally with modern amenities, price ₹1.2 Cr" },
+  { id: "b2", name: "Paradise Biryani", category: "Restaurant", location: "Hyderabad, India", rating: 4.9, image: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Paradise_Biryani_Hyderabad.jpg", address: "Secunderabad, Hyderabad, Telangana", phone: "+91 91234-56789", email: "info@paradisebiryani.com", website: "https://paradisebiryani.example.com", socials: {}, description: "Famous Hyderabadi biryani restaurant in Secunderabad" },
+  { id: "b3", name: "GVK One Mall", category: "Shopping", location: "Hyderabad, India", rating: 4.6, image: "https://upload.wikimedia.org/wikipedia/commons/3/39/GVK_One_Hyderabad.jpg", address: "Banjara Hills, Hyderabad, Telangana", phone: "+91 99887-66554", email: "info@gvkonemall.com", website: "https://gvkonemall.example.com", socials: {}, description: "Premium shopping mall in Banjara Hills" },
 ];
 
 export const promotions = [
