@@ -6,6 +6,6 @@ export const siteConfig = {
   ogImage: "/placeholder.svg",
   googleAnalyticsId: "",
   googleSiteVerification: "",
-  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd8ZXjD1qKFr7Zn3BV8zCvPg_sample_form_url/viewform",
+  googleFormUrl: "https://forms.gle/4UXJPG7JTzauKrDE8",
 };
 export type SiteConfig = typeof siteConfig;
