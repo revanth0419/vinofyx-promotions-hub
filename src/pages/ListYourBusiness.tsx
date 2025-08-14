@@ -43,11 +43,23 @@ Description: ${detail.description}
       <SEO title="List Your Business in Hyderabad — VinoFyx" description="Submit your business to VinoFyx Promotions in Hyderabad. Connect with local customers across the city." path="/list-your-business" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-6">List Your Business in Hyderabad</h1>
-        {siteConfig.googleFormUrl ? (
-          <div className="aspect-[3/4] md:aspect-video rounded-md overflow-hidden border">
-            <iframe src={siteConfig.googleFormUrl} title="List Your Business Form" className="w-full h-full" />
-          </div>
-        ) : (
+        <div className="mb-8">
+          <Button asChild className="w-full sm:w-auto">
+            <a 
+              href="https://forms.gle/4UXJPG7JTzauKrDE8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              Fill Out the Form
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </Button>
+        </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Or Add Your Business Below</h2>
           <form onSubmit={submitLocal} className="grid gap-4 max-w-2xl">
             <Input placeholder="Business Name" required value={detail.name} onChange={(e) => setDetail({ ...detail, name: e.target.value })} />
             <Input placeholder="Category" required value={detail.category} onChange={(e) => setDetail({ ...detail, category: e.target.value })} />
@@ -59,7 +71,7 @@ Description: ${detail.description}
             <Button type="submit">Submit</Button>
             <p className="text-sm text-muted-foreground">Your business details will be sent to our team for review and approval.</p>
           </form>
-        )}
+        </div>
       </section>
     </>
   );

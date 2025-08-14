@@ -85,14 +85,16 @@ export const DynamicBusinessForm = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             Add Your Business
-            <a 
-              href="https://forms.gle/4UXJPG7JTzauKrDE8" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:text-primary/80 flex items-center gap-1"
-            >
-              or use Google Form <ExternalLink className="h-3 w-3" />
-            </a>
+            <Button asChild variant="outline" size="sm">
+              <a 
+                href="https://forms.gle/4UXJPG7JTzauKrDE8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                Fill Out the Form <ExternalLink className="h-3 w-3" />
+              </a>
+            </Button>
           </CardTitle>
         </CardHeader>
         <CardContent>
