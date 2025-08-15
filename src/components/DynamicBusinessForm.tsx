@@ -8,7 +8,7 @@ import { businessListingSchema } from "@/lib/validations";
 import { toast } from "sonner";
 import { BusinessCard, Business } from "@/components/BusinessCard";
 import { ExternalLink } from "lucide-react";
-import { categories } from "@/data/data";
+import { categories, placeholderImg } from "@/data/data";
 
 type LocalBusiness = {
   id: string;
@@ -61,7 +61,7 @@ export const DynamicBusinessForm = () => {
       category: formData.category,
       location: "Hyderabad, India",
       contact: formData.contact,
-      image: formData.image || "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: formData.image || placeholderImg,
       description: formData.description,
       rating: formData.rating
     };
@@ -137,10 +137,11 @@ export const DynamicBusinessForm = () => {
             />
             <Input
               type="url"
-              placeholder="Image URL (direct link to image)"
+              placeholder="Image URL (external hosting required)"
               value={formData.image}
               onChange={(e) => setFormData({ ...formData, image: e.target.value })}
             />
+            <p className="text-xs text-muted-foreground">Note: Please provide a direct link to an image hosted externally. Local file uploads are not currently supported.</p>
             <Textarea
               placeholder="Business Description"
               required
