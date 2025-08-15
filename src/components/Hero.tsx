@@ -16,7 +16,7 @@ export const Hero = () => {
             </p>
             <div className="mt-6 flex gap-3">
               <Button asChild>
-                <Link to="/list-your-business">List Your Business</Link>
+                <a href="https://forms.gle/4UXJPG7JTzauKrDE8" target="_blank" rel="noopener noreferrer">List Your Business</a>
               </Button>
               <Button asChild variant="secondary">
                 <Link to="/promotions">Explore Promotions</Link>
