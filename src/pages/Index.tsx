@@ -62,9 +62,6 @@ const Index = () => {
         </div>
       </section>
       <section className="container py-10">
-        <DynamicBusinessForm />
-      </section>
-      <section className="container py-10">
         <HyderabadMap />
       </section>
       <section className="container py-10">

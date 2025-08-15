@@ -7,6 +7,9 @@ export const Footer = () => {
           <p className="text-sm text-muted-foreground mt-2">
             Promote your business and discover the best local deals.
           </p>
+          <address className="text-sm text-muted-foreground mt-2 not-italic">
+            H no: 2-3-405, Venkateshwara Colony, Macha, Bolarum, Secunderabad, Hyderabad, Telangana 500010
+          </address>
         </div>
         <nav className="flex flex-col gap-2 text-sm">
           

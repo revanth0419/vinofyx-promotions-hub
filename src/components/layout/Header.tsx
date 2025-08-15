@@ -31,13 +31,13 @@ export const Header = () => {
               {n.label}
             </NavLink>)}
           <Button asChild>
-            <Link to="/list-your-business">List Your Business</Link>
+            <a href="https://forms.gle/4UXJPG7JTzauKrDE8" target="_blank" rel="noopener noreferrer">List Your Business</a>
           </Button>
           <ThemeToggle />
         </nav>
         <div className="md:hidden flex items-center gap-2">
           <Button asChild size="sm">
-            <Link to="/list-your-business">List</Link>
+            <a href="https://forms.gle/4UXJPG7JTzauKrDE8" target="_blank" rel="noopener noreferrer">List</a>
           </Button>
           <ThemeToggle />
           <Button variant="ghost" size="icon" aria-label="Toggle menu" onClick={() => setOpen(v => !v)}>
