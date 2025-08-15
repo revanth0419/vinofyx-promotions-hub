@@ -15,7 +15,15 @@ export const BusinessCard = ({ id, name, category, location, rating, image }: Bu
   return (
     <Link to={`/business/${id}`} className="group">
       <Card className="overflow-hidden transition-transform group-hover:-translate-y-0.5">
-        <img src={image} alt={`${name} ${category} in ${location}`} className="h-40 w-full object-cover" loading="lazy" />
+        <img 
+          src={image} 
+          alt={`${name} ${category} in ${location}`} 
+          className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-110" 
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.src = "https://via.placeholder.com/400x300?text=Image+Not+Available";
+          }}
+        />
         <CardContent className="p-4">
           <div className="flex items-center justify-between">
             <h3 className="font-medium">{name}</h3>

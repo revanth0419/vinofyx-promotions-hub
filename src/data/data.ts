@@ -1,13 +1,13 @@
 // Default placeholder image for businesses
 const placeholder = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
 
-export const categories = ["Restaurant", "Real Estate", "Shopping", "Other"];
+export const categories = ["Restaurant", "Real Estate", "Shopping", "Hotel", "Other"];
 export const locations = ["Hyderabad, India"];
 
 export const businesses = [
-  { id: "b1", name: "Minerva Coffee Shop", category: "Restaurant", location: "Hyderabad, India", rating: 4.6, image: "https://i.ibb.co/8KqGz7j/minerva-coffee-shop.jpg", address: "Banjara Hills, Hyderabad, Telangana", phone: "+91 98765-43210", email: "info@minervacoffee.com", website: "https://minervacoffee.example.com", socials: {}, description: "Premium coffee shop in Banjara Hills serving authentic South Indian filter coffee" },
-  { id: "b2", name: "Inorbit Mall", category: "Shopping", location: "Hyderabad, India", rating: 4.5, image: "https://i.ibb.co/9qX8R2m/inorbit-mall.jpg", address: "HITEC City, Hyderabad, Telangana", phone: "+91 91234-56789", email: "info@inorbitmall.com", website: "https://inorbitmall.example.com", socials: {}, description: "Modern shopping mall in HITEC City with international brands" },
-  { id: "b3", name: "Aparna Serene Park", category: "Real Estate", location: "Hyderabad, India", rating: 4.7, image: "https://i.ibb.co/7XtL9K4/aparna-serene-park.jpg", address: "Kondapur, Hyderabad, Telangana", phone: "+91 99887-66554", email: "info@aparnaserenepark.com", website: "https://aparnaserenepark.example.com", socials: {}, description: "Luxury residential apartments in Kondapur with world-class amenities" },
+  { id: "b1", name: "Karachi Bakery", category: "Restaurant", location: "Hyderabad, India", rating: 4.7, image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Karachi_Bakery_Hyderabad.jpg", address: "Banjara Hills, Hyderabad, Telangana", phone: "+91 98765-43210", email: "info@karachibakery.com", website: "https://karachibakery.example.com", socials: {}, description: "Famous bakery in Hyderabad known for authentic biscuits and sweets" },
+  { id: "b2", name: "Shilparamam", category: "Shopping", location: "Hyderabad, India", rating: 4.6, image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Shilparamam_Entrance_Hyderabad.jpg", address: "HITEC City, Hyderabad, Telangana", phone: "+91 91234-56789", email: "info@shilparamam.com", website: "https://shilparamam.example.com", socials: {}, description: "Cultural and crafts village showcasing traditional Indian art and handicrafts" },
+  { id: "b3", name: "ITC Kohenur", category: "Hotel", location: "Hyderabad, India", rating: 4.8, image: "https://upload.wikimedia.org/wikipedia/commons/7/78/ITC_Kohenur_Hyderabad.jpg", address: "Kondapur, Hyderabad, Telangana", phone: "+91 99887-66554", email: "info@itckohenur.com", website: "https://itckohenur.example.com", socials: {}, description: "Luxury hotel in Hyderabad with world-class amenities and services" },
 ];
 
 export const promotions = [
