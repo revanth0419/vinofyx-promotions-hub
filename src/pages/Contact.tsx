@@ -42,7 +42,7 @@ Message: ${formData.message}`;
 
   return (
     <>
-      <SEO title="Contact — VinoFyx Promotions" description="Contact VinoFyx Promotions for support, partnerships, and inquiries." path="/contact" />
+      <SEO title="Contact — vinofyx Promotions" description="Contact vinofyx Promotions for support, partnerships, and inquiries." path="/contact" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-6">Contact</h1>
         <div className="grid gap-8 md:grid-cols-2">
@@ -55,11 +55,11 @@ Message: ${formData.message}`;
           </form>
           <div>
             <h2 className="font-semibold">Address</h2>
-            <p className="text-sm text-muted-foreground mt-2">VinoFyx HQ, 123 Business Ave, City</p>
+            <p className="text-sm text-muted-foreground mt-2">vinofyx HQ, 123 Business Ave, City</p>
             <div className="mt-4 aspect-video rounded-md overflow-hidden border">
               <iframe
                 src={`https://www.google.com/maps?q=${encodeURIComponent("123 Business Ave, City")}&output=embed`}
-                title="VinoFyx HQ Map"
+                title="vinofyx HQ Map"
                 loading="lazy"
                 className="w-full h-full"
               />

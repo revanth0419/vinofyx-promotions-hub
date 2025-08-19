@@ -23,13 +23,13 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="VinoFyx Promotions — Promote Your Business in Hyderabad"
-        description="Discover local deals and list your business in Hyderabad on VinoFyx Promotions. Connect with customers across the City of Pearls."
+        title="vinofyx Promotions — Promote Your Business in Hyderabad"
+        description="Discover local deals and list your business in Hyderabad on vinofyx Promotions. Connect with customers across the City of Pearls."
         path="/"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "VinoFyx Promotions",
+          "name": "vinofyx Promotions",
           "url": "https://promotions.vinofyx.com",
           "address": {
             "@type": "PostalAddress",

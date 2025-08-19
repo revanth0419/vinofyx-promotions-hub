@@ -20,7 +20,7 @@ export const Footer = () => {
           <Link to="/admin">Admin</Link>
         </nav>
         <div className="text-sm text-muted-foreground flex items-end">
-          © {new Date().getFullYear()} VinoFyx. All rights reserved.
+          © {new Date().getFullYear()} vinofyx. All rights reserved.
         </div>
       </div>
     </footer>;

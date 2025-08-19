@@ -30,7 +30,7 @@ const Listings = () => {
   return (
     <>
       <SEO
-        title="Business Listings — VinoFyx Promotions"
+        title="Business Listings — vinofyx Promotions"
         description="Browse businesses by category and location. Find the right service or store near you."
         path="/listings"
       />

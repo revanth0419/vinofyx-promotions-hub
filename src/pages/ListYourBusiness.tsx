@@ -40,7 +40,7 @@ Description: ${detail.description}
 
   return (
     <>
-      <SEO title="List Your Business in Hyderabad — VinoFyx" description="Submit your business to VinoFyx Promotions in Hyderabad. Connect with local customers across the city." path="/list-your-business" />
+      <SEO title="List Your Business in Hyderabad — vinofyx" description="Submit your business to vinofyx Promotions in Hyderabad. Connect with local customers across the city." path="/list-your-business" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-6">List Your Business in Hyderabad</h1>
         <div className="mb-8">

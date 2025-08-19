@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "VinoFyx Promotions",
+  name: "vinofyx Promotions",
   baseUrl: "https://promotions.vinofyx.com",
   adminEmail: "contact@vinofyx.com",
   twitterHandle: "@vinofyx",

@@ -3,7 +3,7 @@ import { SEO } from "@/components/seo/SEO";
 const Admin = () => {
   return (
     <>
-      <SEO title="Admin — VinoFyx Promotions" description="Manage listings, promotions, and reviews." path="/admin" />
+      <SEO title="Admin — vinofyx Promotions" description="Manage listings, promotions, and reviews." path="/admin" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-4">Admin</h1>
         <p className="text-muted-foreground">

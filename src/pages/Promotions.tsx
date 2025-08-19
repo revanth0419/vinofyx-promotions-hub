@@ -18,7 +18,7 @@ const Promotions = () => {
 
   return (
     <>
-      <SEO title="Promotions — VinoFyx" description="Explore current offers, discounts, and events from local businesses." path="/promotions" />
+      <SEO title="Promotions — vinofyx" description="Explore current offers, discounts, and events from local businesses." path="/promotions" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-6">Promotions</h1>
         <div className="flex items-center gap-3">
