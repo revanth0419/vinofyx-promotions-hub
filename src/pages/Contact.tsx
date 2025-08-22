@@ -1,58 +1,37 @@
 import { SEO } from "@/components/seo/SEO";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
-import { useRef, useState } from "react";
-import { contactSchema } from "@/lib/validations";
-import { toast } from "sonner";
 const Contact = () => {
-  const [trap, setTrap] = useState("");
-  const started = useRef(Date.now());
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const data = new FormData(form);
-
-    // Security checks: honeypot and time-based validation
-    if (trap || Date.now() - started.current < 2000) {
-      toast.error("Please try again");
-      return;
-    }
-
-    // Validate form data
-    const formData = {
-      name: data.get("name") as string,
-      email: data.get("email") as string,
-      message: data.get("message") as string
-    };
-    const validationResult = contactSchema.safeParse(formData);
-    if (!validationResult.success) {
-      toast.error("Please check your input and try again");
-      return;
-    }
-    const body = `Name: ${formData.name}
-Email: ${formData.email}
-Message: ${formData.message}`;
-    window.location.href = `mailto:${siteConfig.adminEmail}?subject=Contact from promotions.vinofyx.com&body=${encodeURIComponent(body)}`;
-  };
   return <>
       <SEO title="Contact — vinofyx Promotions" description="Contact vinofyx Promotions for support, partnerships, and inquiries." path="/contact" />
       <section className="container py-10">
         <h1 className="text-3xl font-bold mb-6">Contact</h1>
         <div className="grid gap-8 md:grid-cols-2">
-          <form onSubmit={onSubmit} className="grid gap-4">
-            <Input name="name" placeholder="Your name" required />
-            <Input name="email" type="email" placeholder="Email" required />
-            <Textarea name="message" placeholder="Message" required />
-            <input type="text" className="hidden" value={trap} onChange={e => setTrap(e.target.value)} aria-hidden tabIndex={-1} />
-            <Button type="submit">Send</Button>
-          </form>
+          <div className="flex flex-col justify-center">
+            <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
+            <p className="text-muted-foreground mb-6">
+              Have questions or need support? Contact us through our form.
+            </p>
+            <Button asChild className="w-fit">
+              <a href="https://forms.gle/ux8KqDuRMLpBHgPL7" target="_blank" rel="noopener noreferrer">
+                Contact Us
+              </a>
+            </Button>
+          </div>
           <div>
             <h2 className="font-semibold">Address</h2>
             <p className="text-sm text-muted-foreground mt-2">H no: 2-3-405, Venkateshwara Colony, Macha, Bolarum, Secunderabad, Hyderabad, Telangana 500010</p>
             <div className="mt-4 aspect-video rounded-md overflow-hidden border">
-              <iframe src={`https://www.google.com/maps?q=${encodeURIComponent("123 Business Ave, City")}&output=embed`} title="vinofyx HQ Map" loading="lazy" className="w-full h-full" />
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.1550252142597!2d78.50877721487793!3d17.517408688011112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a57eaf46bb5%3A0x6b0d43b2e3f0a32a!2sVenkateshwara%20Colony%2C%20Macha%20Bolarum%2C%20Secunderabad%2C%20Telangana%20500010!5e0!3m2!1sen!2sin!4v1692700000000!5m2!1sen!2sin"
+                width="100%" 
+                height="300" 
+                style={{border:0}} 
+                allowFullScreen 
+                loading="lazy"  
+                referrerPolicy="no-referrer-when-downgrade"
+                title="vinofyx HQ Map"
+                className="w-full h-full"
+              />
             </div>
           </div>
         </div>
