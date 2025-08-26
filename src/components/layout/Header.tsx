@@ -18,12 +18,20 @@ const navItems = [{
 }, {
   to: "/contact",
   label: "Contact"
+}, {
+  to: "/privacy-policy",
+  label: "Privacy Policy"
 }];
 export const Header = () => {
   const [open, setOpen] = useState(false);
   return <header className="sticky top-0 z-40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="font-semibold text-lg">Vinofyx Promotions</Link>
+        <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
+          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
+            V
+          </div>
+          <span>vinofyx Promotions</span>
+        </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map(n => <NavLink key={n.to} to={n.to} className={({
           isActive

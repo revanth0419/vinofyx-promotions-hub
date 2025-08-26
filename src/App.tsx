@@ -12,6 +12,7 @@ import ListYourBusiness from "./pages/ListYourBusiness";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Admin from "./pages/Admin";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Layout } from "@/components/layout/Layout";
@@ -37,6 +38,7 @@ const App = () => (
                 <Route path="/list-your-business" element={<ListYourBusiness />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/admin" element={<Admin />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
