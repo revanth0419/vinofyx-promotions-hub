@@ -1,5 +1,7 @@
 import { SEO } from "@/components/seo/SEO";
 import { Button } from "@/components/ui/button";
+import { Phone, Globe, Mail } from "lucide-react";
+import { BackToTop } from "@/components/BackToTop";
 const Contact = () => {
   return <>
       <SEO title="Contact — vinofyx Promotions" description="Contact vinofyx Promotions for support, partnerships, and inquiries." path="/contact" />
@@ -35,7 +37,54 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        
+        <div className="mt-8 pt-8 border-t">
+          <h2 className="text-xl font-semibold mb-4">Business Contact Details</h2>
+          <div className="grid gap-4 sm:grid-cols-3">
+            <a 
+              href="tel:+919391934534" 
+              className="flex items-center gap-3 p-4 bg-card rounded-lg border hover:bg-muted/50 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium">Phone</p>
+                <p className="text-sm text-muted-foreground">+91 9391934534</p>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.vinofyx.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 bg-card rounded-lg border hover:bg-muted/50 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Globe className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium">Website</p>
+                <p className="text-sm text-muted-foreground">www.vinofyx.com</p>
+              </div>
+            </a>
+            
+            <a 
+              href="mailto:info@vinofyx.com" 
+              className="flex items-center gap-3 p-4 bg-card rounded-lg border hover:bg-muted/50 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-medium">Email</p>
+                <p className="text-sm text-muted-foreground">info@vinofyx.com</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
+      <BackToTop />
     </>;
 };
 export default Contact;

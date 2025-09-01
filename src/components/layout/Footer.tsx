@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube } from "lucide-react";
+import { Instagram, Facebook, Youtube, Phone, Globe, Mail } from "lucide-react";
 export const Footer = () => {
   return <footer className="border-t mt-16">
       <div className="container py-8 grid gap-6 md:grid-cols-3">
@@ -25,7 +25,7 @@ export const Footer = () => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a 
-                href="https://www.facebook.com/profile.php?id=61579395355442" 
+                href="https://www.facebook.com/profile.php?id=61579344001214" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -46,7 +46,6 @@ export const Footer = () => {
           </div>
         </div>
         <nav className="flex flex-col gap-2 text-sm">
-          
           <Link to="/promotions">Promotions</Link>
           <Link to="/list-your-business">List Your Business</Link>
           <Link to="/about">About</Link>
@@ -54,8 +53,36 @@ export const Footer = () => {
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/admin">Admin</Link>
         </nav>
-        <div className="text-sm text-muted-foreground flex items-end">
-          © {new Date().getFullYear()} vinofyx. All rights reserved.
+        <div>
+          <h4 className="font-medium text-sm mb-3">Contact Details</h4>
+          <div className="flex flex-col gap-2 text-sm">
+            <a 
+              href="tel:+919391934534" 
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              +91 9391934534
+            </a>
+            <a 
+              href="https://www.vinofyx.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Globe className="w-4 h-4" />
+              www.vinofyx.com
+            </a>
+            <a 
+              href="mailto:info@vinofyx.com" 
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              info@vinofyx.com
+            </a>
+          </div>
+          <div className="text-sm text-muted-foreground mt-4">
+            © {new Date().getFullYear()} vinofyx. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>;

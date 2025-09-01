@@ -1,4 +1,5 @@
 import { SEO } from "@/components/seo/SEO";
+import { BackToTop } from "@/components/BackToTop";
 
 const About = () => {
   return (
@@ -55,6 +56,7 @@ const About = () => {
           </p>
         </div>
       </section>
+      <BackToTop />
     </>
   );
 };

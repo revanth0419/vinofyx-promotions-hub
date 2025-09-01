@@ -4,6 +4,7 @@ import { BusinessCard } from "@/components/BusinessCard";
 import { useSearchParams } from "react-router-dom";
 import { useMemo, useState, useEffect } from "react";
 import { SearchFilters } from "@/components/SearchFilters";
+import { BackToTop } from "@/components/BackToTop";
 
 const Listings = () => {
   const [params, setParams] = useSearchParams();
@@ -51,6 +52,7 @@ const Listings = () => {
           {filtered.length === 0 && <p className="text-muted-foreground">No businesses found.</p>}
         </div>
       </section>
+      <BackToTop />
     </>
   );
 };
