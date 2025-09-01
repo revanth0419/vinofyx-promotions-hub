@@ -15,31 +15,13 @@ export const Footer = () => {
           <div className="mt-4">
             <h4 className="font-medium text-sm mb-3">Follow Us</h4>
             <div className="flex gap-3">
-              <a 
-                href="https://www.instagram.com/promotionsvinofyx/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Follow us on Instagram"
-              >
+              <a href="https://www.instagram.com/promotionsvinofyx/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Follow us on Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a 
-                href="https://www.facebook.com/profile.php?id=61579344001214" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Follow us on Facebook"
-              >
+              <a href="https://www.facebook.com/profile.php?id=61579344001214" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Follow us on Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a 
-                href="https://www.youtube.com/@PromotionsVinofyx" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Subscribe to our YouTube channel"
-              >
+              <a href="https://www.youtube.com/@PromotionsVinofyx" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Subscribe to our YouTube channel">
                 <Youtube className="w-4 h-4" />
               </a>
             </div>
@@ -51,31 +33,20 @@ export const Footer = () => {
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/admin">Admin</Link>
+          
         </nav>
         <div>
           <h4 className="font-medium text-sm mb-3">Contact Details</h4>
           <div className="flex flex-col gap-2 text-sm">
-            <a 
-              href="tel:+919391934534" 
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
+            <a href="tel:+919391934534" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
               +91 9391934534
             </a>
-            <a 
-              href="https://www.vinofyx.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
+            <a href="https://www.vinofyx.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Globe className="w-4 h-4" />
               www.vinofyx.com
             </a>
-            <a 
-              href="mailto:info@vinofyx.com" 
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
+            <a href="mailto:info@vinofyx.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
               info@vinofyx.com
             </a>
